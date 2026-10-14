@@ -1,7 +1,10 @@
 """Campus Talent Show: a cheerful MC must keep the show on time.
 Run: python3 story.py. All acts and timings are fictional classroom examples.
 """
+
+
 from abc import ABC, abstractmethod
+from typing import cast
 
 
 # ACT 1: Time is a resource with a rule: don't schedule negative minutes.
@@ -37,7 +40,7 @@ class Performance(ABC):
         return f"{self.name}: {self.duration()} minutes at {self.venue}."
 
     @abstractmethod
-    def duration(self):
+    def duration(self) -> int:
         pass  # A bare Performance object is incomplete.
 
 
@@ -63,7 +66,7 @@ class ShortDance(Dance):  # Performance -> Dance -> ShortDance: multilevel.
 # ACT 3: One extra capability joins the existing dance family.
 class ApplauseMixin:
     def describe(self):
-        return f"Mukono, make some noise! {super().describe()}"
+        return f"Mukono, make some noise! {cast(Performance, super()).describe()}"
 
 
 class HeadlineDance(ApplauseMixin, ShortDance):
@@ -80,23 +83,55 @@ class AudienceWave:  # No Performance inheritance: the shared behaviour is enoug
         return "Audience wave: one minute, everybody gets to be famous."
 
 
+class UniversityMember:
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        print(f"Hello, my name is {self.name}.")
+
+
+class Student(UniversityMember):
+    def show_student_status(self):
+        print("I am a student.")
+
+
+####EXTENSION 5 RUNNING ORDER
+class RunningOrder:
+    def __init__(self):
+        self.acts = []
+
+    def add(self, performance):
+        self.acts.append(performance)
+
+    def remove(self, performance):
+        self.acts.remove(performance)
+
+    def display(self):
+        if not self.acts:
+            return "No acts booked."
+        return "\n".join(
+            f"{number}. {performance.name} ({performance.duration()} minutes)"
+            for number, performance in enumerate(self.acts, start=1)
+        )
+
 # ACT 4: The show HAS-A clock; it borrows and swaps performance objects.
 class TalentShow:
     def __init__(self, mc, minutes):
         self.mc = mc
         self.clock = ShowClock(minutes)  # Owned part: composition.
-        self._lineup = []  # _ marks intended internal use, by convention.
+        self.running_order = RunningOrder()
         self.performance = None
 
     @property
     def act_count(self):  # Read-only: reflects the actual booked lineup.
-        return len(self._lineup)
+        return len(self.running_order.acts)
 
     def book(self, performance):
         self.performance = performance  # Borrowed part: aggregation.
         minutes = performance.duration()  # Abstraction: MC doesn't count dance steps.
         if self.clock.reserve(minutes):
-            self._lineup.append(performance)  # Collaborating objects in a collection.
+            self.running_order.add(performance)
             return f"MC {self.mc} books {performance.name}."
         return f"No slot for {performance.name}. The timetable has entered the chat."
 
@@ -121,11 +156,23 @@ def main():
     print(faith.book(acts[0]))
     print(f"Joel: {joel.clock.remaining} minutes left; acts: {joel.act_count}")
     print(f"Faith: {faith.clock.remaining} minutes left; acts: {faith.act_count}")
+    print("Joel's running order:")
+    print(joel.running_order.display())
+    print("Faith's running order:")
+    print(faith.running_order.display())
     print("MRO (look left to right):")
     for parent in HeadlineDance.__mro__:
         print(parent.__name__)
     print("Ending: everyone gets a turn, and Joel's timetable survives.")
 
+    student = Student("Martha")
+    student.introduce()
+    student.show_student_status()
+
 
 if __name__ == "__main__":
     main()
+    
+
+
+
