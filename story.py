@@ -78,6 +78,16 @@ class AudienceWave:  # No Performance inheritance: the shared behaviour is enoug
 
     def describe(self):
         return "Audience wave: one minute, everybody gets to be famous."
+# =========================================================================
+# NEW ADDITION: Emergency Backup Act (Demonstrates Multiple Inheritance)
+# =========================================================================
+class EmergencyBackup(ApplauseMixin, Poetry):
+    """
+    An emergency spoken-word performance that inherits from ApplauseMixin 
+    and Poetry to save the show if time allows, showing a new branch of MRO.
+    """
+    def __init__(self, name="MC's Freestyle Save"):
+        super().__init__(name)
 
 
 # ACT 4: The show HAS-A clock; it borrows and swaps performance objects.
