@@ -99,6 +99,16 @@ class TalentShow:
             self._lineup.append(performance)  # Collaborating objects in a collection.
             return f"MC {self.mc} books {performance.name}."
         return f"No slot for {performance.name}. The timetable has entered the chat."
+      
+    
+    def show_lineup(self):
+        if not self._lineup:
+            return "No performances have been booked yet."
+
+        lineup = [performance.describe()
+                  for performance in self._lineup]
+
+        return "Show Lineup:\n" + "\n".join(lineup)
 
 
 def audition(performances):  # Week 1's function, parameters, list, and loop.
