@@ -9,7 +9,7 @@
 
 | Full name | Access number | Registration number | GitHub username | Foundation task | Personal branch | Commit link(s) | Merged foundation PR |
 |---|---|---|---|---|---|---|---|
-| Ndiku Leonald | B35011 | S25B13/086 | Ndiku-leonald | Extension 6: Lightning dance | leo_branch | | |
+| Ndiku Leonald | B35011 | S25B13/086 | Ndiku-leonald | Extension 6: Lightning dance | leo_branch | [71fa20d](https://github.com/Ndiku-leonald/OOP-WORK/commit/71fa20d), [9248ebd](https://github.com/Ndiku-leonald/OOP-WORK/commit/9248ebd) | |
 |  | | | | | | | |
 |  | | | | | | | |
 |  | | | | | | | |
@@ -29,13 +29,17 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 
 | Member | Later-topic responsibility | Personal branch | Commit link(s) | Merged later-topic PR(s) | Review/comment links on teammates' PRs |
 |---|---|---|---|---|---|
-| Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | leo-advanced | | | |
+| Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | leo-advanced | [a20abc2](https://github.com/Ndiku-leonald/OOP-WORK/commit/a20abc2) | | |
 |  | | | | | |
 |  | | | | | |
 |  | | | | | |
 |  | | | | | |
 
 ## Explain the work
+
+### A4: Choice factory, Single Responsibility, and automated tests
+
+The factory creates `Dance`, `Poetry`, and `AudienceWave` objects from clear keys. This keeps object creation in `factory.py`, while `TalentShow` handles booking and `ShowClock` handles resource rules. The automated checks cover normal creation, use through `TalentShow`, refused booking without state changes, unknown keys, and independent show state. The test suite ran seven tests successfully, and the A4 demo completed successfully.
 
 ## Run the final project
 
