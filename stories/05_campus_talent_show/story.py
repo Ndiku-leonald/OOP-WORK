@@ -116,6 +116,19 @@ class TalentShow:
 
         return "Show Lineup:\n" + "\n".join(lineup)
 
+    def running_order(self):
+        """Return the booked names, count, and minutes remaining."""
+        if not self._lineup:
+            return "No performances have been booked yet."
+
+        names = "\n".join(
+            f"{number}. {performance.name}"
+            for number, performance in enumerate(self._lineup, start=1)
+        )
+        return (f"Running order:\n{names}\n"
+                f"Count: {self.act_count}\n"
+                f"Minutes left: {self.clock.remaining}")
+
 
 def audition(performances):  # Week 1's function, parameters, list, and loop.
     for performance in performances:
