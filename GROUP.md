@@ -23,7 +23,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Selected option | Members and specific responsibilities | Merged later-topic PRs | Demo command | Automated-check command |
 |---|---|---|---|---|
 | A4 | Ndiku Leonald: factory implementation and meaningful automated tests | **TODO: add merged PR link** | **TODO: add A4 demo command** | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py"` |
-| **TODO: A1-A5** | **TODO** | **TODO** | **TODO** | **TODO** |
+|Martha MULWANYI| ** | **TODO** | ADD A5 demo command|python -m unittest test_talent_show -v  |
 | **TODO: A1-A5** | **TODO** | **TODO** | **TODO** | **TODO** |
 
 ## Individual later-topic contributions and reviews
@@ -31,7 +31,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Member | Later-topic responsibility | Personal branch | Commit link(s) | Merged later-topic PR(s) | Review/comment links on teammates' PRs |
 |---|---|---|---|---|---|
 | Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | **TODO: add branch** | **TODO** | **TODO** | **TODO** |
-| **TODO: member 2** | | | | | |
+| Martha Mulwanyi  | |A5 |ensuring fair scheduling, proper time management, and reliable performance. | | |
 | **TODO: member 3** | | | | | |
 | **TODO: member 4** | | | | | |
 | **TODO: member 5** | | | | | |
