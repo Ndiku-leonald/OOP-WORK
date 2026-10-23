@@ -22,8 +22,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 
 | Selected option | Members and specific responsibilities | Merged later-topic PRs | Demo command | Automated-check command |
 |---|---|---|---|---|
-| A4 | Ndiku Leonald: factory implementation and meaningful automated tests | **TODO: add merged PR link** | **TODO: add A4 demo command** | `py -3 -m unittest
-discover -s stories/05_campus_talent_show -p "test_*.py"` |
+| A4 | Ndiku Leonald: factory implementation and meaningful automated tests | **TODO: add merged PR link** | **TODO: add A4 demo command** | `py -3 -m unittestdiscover -s stories/05_campus_talent_show -p "test_*.py"` |
 |A5|Martha MULWANYI|**TODO: add merged PR link**  | **TODO: add A5 demo command | py -3 -m unittest discover -s . -p "test_*.py" -v  |
 | **TODO: A1-A5** | **TODO** | **TODO** | **TODO** | **TODO** |
 
