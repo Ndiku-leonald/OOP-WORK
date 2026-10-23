@@ -31,7 +31,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Member | Later-topic responsibility | Personal branch | Commit link(s) | Merged later-topic PR(s) | Review/comment links on teammates' PRs |
 |---|---|---|---|---|---|
 | Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | **TODO: add branch** | **TODO** | **TODO** | **TODO** |
-| Martha Mulwanyi |A5 |ensuring proper time management, and reliable performance. | |
+| Martha Mulwanyi |A5:ensuring fair scheduling, proper time management, and reliable performance. | |
 | **TODO: member 3** | | | | | |
 | **TODO: member 4** | | | | | |
 | **TODO: member 5** | | | | | |
