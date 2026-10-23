@@ -11,7 +11,7 @@
 | Full name | Access number | Registration number | GitHub username | Foundation task | Personal branch | Commit link(s) | Merged foundation PR |
 |---|---|---|---|---|---|---|---|
 | Ndiku Leonald | B35011 | S25B13/086 | Ndiku-leonald | Extension 6: Lightning dance | leo_branch | **TODO: add commit link** | **TODO: add PR link** |
-| **TODO: member 2** | | | | | | | |
+| **TODO: member 2** |MARTHA MULWANYI | B34658|S25B13/037 |MARTHA-MULWANYI |Extention 5 RunningOrders | martha-mulwanyi branch| TODO:add commit link **|**TODO:add PR LINL
 | **TODO: member 3** | | | | | | | |
 | **TODO: member 4** | | | | | | | |
 | **TODO: member 5** | | | | | | | |
