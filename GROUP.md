@@ -22,7 +22,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Selected option | Members and specific responsibilities | Merged later-topic PRs | Demo command | Automated-check command |
 |---|---|---|---|---|
 | A4 | Ndiku Leonald: factory implementation and meaningful automated tests | [PR #5](https://github.com/Ndiku-leonald/OOP-WORK/pull/5) | `py -3 stories/05_campus_talent_show/demo_leonald_b35011_a4.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py"` |
-| A5 | Martha MULWANYI: fair running-order planner functionality | TODO: add merged PR link | TODO: add A5 demo command | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py" -v` |
+| A5 | Ruzira Anthony: planner core and unit tests; Kirabo: integration with `TalentShow` and `ShowClock`; Alpha: end-to-end demo and integration tests | PRs pending | `py -3 stories/05_campus_talent_show/demo_a5_fair_running_order.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a5_*.py" -v` |
 | A1 | Ruzira Anthony: `StageTime` value object, validation, display, comparison, addition, tests and demo. Emuron Joy: `TalentShow.preview_total()` integration, tests and demo. | Anthony: [PR #8](https://github.com/Ndiku-leonald/OOP-WORK/pull/8), merged as [13915cf](https://github.com/Ndiku-leonald/OOP-WORK/commit/13915cf692ece11288164c0bee2166e1506df9ad); Joy: [PR #7](https://github.com/Ndiku-leonald/OOP-WORK/pull/7), merged as [b53e9c6](https://github.com/Ndiku-leonald/OOP-WORK/commit/b53e9c6c7a969ebcc7eb7ed7412367b806898e82) | `py -3 stories/05_campus_talent_show/demo_anthony_test_a1_stage_time.py`; `py -3 stories/05_campus_talent_show/demo_joy_test_a1_preview.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a1_*.py"` |
 
 ## Individual later-topic contributions and reviews
@@ -44,6 +44,16 @@ The factory creates `Dance`, `Poetry`, and `AudienceWave` objects from clear key
 ### A1: StageTime value and total preview
 
 `StageTime` represents non-negative whole minutes and rejects negative values, fractions, and Booleans. Its friendly string and developer representation are distinct; equal values compare equal, and adding two values returns a new value without changing either operand. Anthony implemented and tested the value object. Joy's merged integration adds `TalentShow.preview_total(choices)`, which totals different choice types without spending time or changing the lineup; it returns zero for an empty list.
+
+### A5: Fair running-order planner
+
+**Need:** Give student performers a fair order while using the available show time well.
+
+**Inputs:** A sequence of `PerformerAct` values, each containing a fictional performer ID and a choice object with `duration()`, plus the available whole-number minutes.
+
+**Rules:** Schedule fitting acts in submission order when there is a tie. Avoid consecutive acts from the same performer whenever another performer's act fits. If no remaining act fits, stop and return the remaining acts as skipped. Planning returns a result and does not change `TalentShow` state; integration books only the scheduled acts through the existing coordinator and clock.
+
+**Expected result:** A plan reports scheduled acts, skipped acts, and unused minutes. Anthony owns the planner and its rule tests; Kirabo owns the `TalentShow` integration; Alpha owns the integrated demo and state-preservation checks.
 
 ## Run the final project
 
