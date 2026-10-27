@@ -2,6 +2,7 @@
 Run: python3 story.py. All acts and timings are fictional classroom examples.
 """
 from abc import ABC, abstractmethod
+from fair_running_order import FairRunningOrderPlanner
 from stage_time import StageTime
 
 
@@ -135,6 +136,14 @@ class TalentShow:
         for choice in choices:
             total = total + StageTime(choice.duration())
         return total
+
+    def plan_and_book(self, performer_acts):
+        plan = FairRunningOrderPlanner().plan(
+            performer_acts, self.clock.remaining
+        )
+        for act in plan.scheduled:
+            self.book(act.performance)
+        return plan
 
 
 def audition(performances):  # Week 1's function, parameters, list, and loop.
