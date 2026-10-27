@@ -2,6 +2,7 @@
 Run: python3 story.py. All acts and timings are fictional classroom examples.
 """
 from abc import ABC, abstractmethod
+from stage_time import StageTime
 
 
 # ACT 1: Time is a resource with a rule: don't schedule negative minutes.
@@ -128,6 +129,12 @@ class TalentShow:
         return (f"Running order:\n{names}\n"
                 f"Count: {self.act_count}\n"
                 f"Minutes left: {self.clock.remaining}")
+
+    def preview_total(self, choices):
+        total = StageTime(0)
+        for choice in choices:
+            total = total + StageTime(choice.duration())
+        return total
 
 
 def audition(performances):  # Week 1's function, parameters, list, and loop.
