@@ -14,6 +14,7 @@
 | Ruzira Anthony | B33216 | M25B13/009 | anthony47779 | EmergencyBackup performance class | anthony-advanced | [PR #2](https://github.com/Ndiku-leonald/OOP-WORK/pull/2) | [PR #2](https://github.com/Ndiku-leonald/OOP-WORK/pull/2) |
 | Emuron Joy | B40249 | S26B13/091 | Emuron19 | Show lineup method | joy-advanced | [PR #1](https://github.com/Ndiku-leonald/OOP-WORK/pull/1) | [PR #1](https://github.com/Ndiku-leonald/OOP-WORK/pull/1) |
 | **TODO: member 5** | | | | | | | |
+| Alpha (member 6) | To be completed by Alpha | To be completed by Alpha | To be completed by Alpha | A5: integrated demo and additional end-to-end checks | To be completed by Alpha | Pending | Pending |
 
 ## Three later-topic choices
 
@@ -22,7 +23,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Selected option | Members and specific responsibilities | Merged later-topic PRs | Demo command | Automated-check command |
 |---|---|---|---|---|
 | A4 | Ndiku Leonald: factory implementation and meaningful automated tests | [PR #5](https://github.com/Ndiku-leonald/OOP-WORK/pull/5) | `py -3 stories/05_campus_talent_show/demo_leonald_b35011_a4.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py"` |
-| A5 | Ruzira Anthony: planner core and unit tests; Kirabo: `TalentShow` integration and integration tests; Alpha: end-to-end demo and additional checks | Anthony: [PR #10](https://github.com/Ndiku-leonald/OOP-WORK/pull/10) (merged); Kirabo and Alpha: pending | `py -3 stories/05_campus_talent_show/demo_a5_fair_running_order.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a5_*.py" -v` |
+| A5 | Ruzira Anthony: planner core and six rule tests; Kirabo: `TalentShow` integration and four integration tests; Alpha (member 6): integrated demo and additional checks | Planner: [PR #10](https://github.com/Ndiku-leonald/OOP-WORK/pull/10), merged as [01f9b8c](https://github.com/Ndiku-leonald/OOP-WORK/commit/01f9b8cfccd50c18cf3cc29fe99e77e0c6c2e764) (opened under Martha's account; planner commit by Anthony). Integration: [PR #11](https://github.com/Ndiku-leonald/OOP-WORK/pull/11), merged as [d26a4eb](https://github.com/Ndiku-leonald/OOP-WORK/commit/d26a4eb257b51aa9cae7c3742760bbd5ca70592f). Alpha's part remains pending. | Pending: Alpha to add `demo_a5_fair_running_order.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a5_*.py" -v` (10 tests pass) |
 | A1 | Ruzira Anthony: `StageTime` value object, validation, display, comparison, addition, tests and demo. Emuron Joy: `TalentShow.preview_total()` integration, tests and demo. | Anthony: [PR #8](https://github.com/Ndiku-leonald/OOP-WORK/pull/8), merged as [13915cf](https://github.com/Ndiku-leonald/OOP-WORK/commit/13915cf692ece11288164c0bee2166e1506df9ad); Joy: [PR #7](https://github.com/Ndiku-leonald/OOP-WORK/pull/7), merged as [b53e9c6](https://github.com/Ndiku-leonald/OOP-WORK/commit/b53e9c6c7a969ebcc7eb7ed7412367b806898e82) | `py -3 stories/05_campus_talent_show/demo_anthony_test_a1_stage_time.py`; `py -3 stories/05_campus_talent_show/demo_joy_test_a1_preview.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a1_*.py"` |
 
 ## Individual later-topic contributions and reviews
@@ -30,11 +31,11 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Member | Later-topic responsibility | Personal branch | Commit link(s) | Merged later-topic PR(s) | Review/comment links on teammates' PRs |
 |---|---|---|---|---|---|
 | Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | leo-advanced | [a20abc2](https://github.com/Ndiku-leonald/OOP-WORK/commit/a20abc2) | [PR #5](https://github.com/Ndiku-leonald/OOP-WORK/pull/5) | TODO: add review links |
-| Martha Mulwanyi |A5:ensuring fair scheduling, proper time management, and reliable performance. | |
-| Ruzira Anthony | A1: implemented `StageTime` with input validation, read-only amount, string/repr formatting, equality, addition, tests and demo | anthony-advanced | [95a9002](https://github.com/Ndiku-leonald/OOP-WORK/commit/95a90025b9b1c38556ed3f95b3648ae60054c174); merge [13915cf](https://github.com/Ndiku-leonald/OOP-WORK/commit/13915cf692ece11288164c0bee2166e1506df9ad) | [PR #8](https://github.com/Ndiku-leonald/OOP-WORK/pull/8) | No review/comment recorded yet |
+| Martha Mulwanyi | A5: opened planner PR #10 under her account; the planner commit is authored by Anthony | martha-advanced | Planner commit: [be84237](https://github.com/Ndiku-leonald/OOP-WORK/commit/be84237acaa4b198fb192d1da9261e8c7214e6da) | [PR #10](https://github.com/Ndiku-leonald/OOP-WORK/pull/10), merged | No review/comment recorded |
+| Ruzira Anthony | A1: implemented `StageTime`; A5: implemented the fair planner and six rule tests | anthony-advanced; anthony-a5 | A1: [95a9002](https://github.com/Ndiku-leonald/OOP-WORK/commit/95a90025b9b1c38556ed3f95b3648ae60054c174); A5: [be84237](https://github.com/Ndiku-leonald/OOP-WORK/commit/be84237acaa4b198fb192d1da9261e8c7214e6da); A1 merge: [13915cf](https://github.com/Ndiku-leonald/OOP-WORK/commit/13915cf692ece11288164c0bee2166e1506df9ad); A5 merge: [01f9b8c](https://github.com/Ndiku-leonald/OOP-WORK/commit/01f9b8cfccd50c18cf3cc29fe99e77e0c6c2e764) | A1 [PR #8](https://github.com/Ndiku-leonald/OOP-WORK/pull/8); A5 code included in [PR #10](https://github.com/Ndiku-leonald/OOP-WORK/pull/10) | No review/comment recorded |
 | Emuron Joy | A1: integrated `TalentShow.preview_total()` with mixed choice types, tests and demo | joy-advanced | [305341e](https://github.com/Ndiku-leonald/OOP-WORK/commit/305341e); merge [b53e9c6](https://github.com/Ndiku-leonald/OOP-WORK/commit/b53e9c6c7a969ebcc7eb7ed7412367b806898e82) | [PR #7](https://github.com/Ndiku-leonald/OOP-WORK/pull/7) | No review/comment recorded yet |
-| Kirabo | A5: integrate `FairRunningOrderPlanner` with `TalentShow` and test booking/state behavior | Kirabo-Advanced | Pending | Pending PR | Pending peer-review links |
-| Alpha | A5: write the integrated running-order demo and additional end-to-end checks | Pending | Pending | Pending PR | Pending peer-review links |
+| Kirabo | A5: integrated `FairRunningOrderPlanner` with `TalentShow` and added booking/state tests | Kirabo-Advanced | [d80d103](https://github.com/Ndiku-leonald/OOP-WORK/commit/d80d1038f879ca7774c311ac2a887f7d4c08732a); merge [d26a4eb](https://github.com/Ndiku-leonald/OOP-WORK/commit/d26a4eb257b51aa9cae7c3742760bbd5ca70592f) | [PR #11](https://github.com/Ndiku-leonald/OOP-WORK/pull/11), merged | No review/comment recorded |
+| Alpha (member 6) | A5: integrated demo and additional end-to-end checks; to be completed by Alpha | To be completed by Alpha | Pending | Pending | Pending |
 
 ## Explain the work
 
@@ -54,7 +55,7 @@ The factory creates `Dance`, `Poetry`, and `AudienceWave` objects from clear key
 
 **Rules:** Schedule fitting acts in submission order when there is a tie. Avoid consecutive acts from the same performer whenever another performer's act fits. If no remaining act fits, stop and return the remaining acts as skipped. Planning returns a result and does not change `TalentShow` state; integration books only the scheduled acts through the existing coordinator and clock.
 
-**Expected result:** A plan reports scheduled acts, skipped acts, and unused minutes. Anthony's planner core is merged in PR #10. Kirabo owns the `TalentShow` integration and its booking/state tests; Alpha owns the integrated demo and additional end-to-end checks.
+**Expected result:** A plan reports scheduled acts, skipped acts, and unused minutes. The planner core and Kirabo's `TalentShow` integration are merged in PRs #10 and #11. Their automated checks currently pass 10 tests. Alpha (member 6) still needs to add the integrated demo and additional end-to-end checks; her identity fields are left for her to complete.
 
 ## Run the final project
 
@@ -96,6 +97,14 @@ py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a1_*.py"
 ```
 
 **TODO:** Add every other member's foundation demo, later-topic demo, automated-check command, and test results.
+
+A5 automated checks:
+
+```powershell
+py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a5_*.py" -v
+```
+
+A5 integrated demo: pending Alpha's contribution.
 
 ## Group evaluation - maximum 250 words
 
