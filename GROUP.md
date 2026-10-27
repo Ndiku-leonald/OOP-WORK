@@ -11,8 +11,8 @@
 |---|---|---|---|---|---|---|---|
 | Ndiku Leonald | B35011 | S25B13/086 | Ndiku-leonald | Extension 6: Lightning dance | leo_branch | [71fa20d](https://github.com/Ndiku-leonald/OOP-WORK/commit/71fa20d), [9248ebd](https://github.com/Ndiku-leonald/OOP-WORK/commit/9248ebd) | [PR #3](https://github.com/Ndiku-leonald/OOP-WORK/pull/3) |
 | MARTHA MULWANYI | B34658 | S25B13/037 | marthamulwanyi-hash | Extension 5: Running order | martha-mulwanyi branch | TODO: add commit link | TODO: add PR link |
-|  | | | | | | | |
-| **TODO: member 4** | | | | | | | |
+| Ruzira Anthony | Pending | M25B13/009 | Pending | Pending | anthony-advanced | Pending | Pending |
+| Emuron Joy | B40249 | S26B13/091 | Pending | A1: preview_total integration | joy-advanced | Pending | Pending |
 | **TODO: member 5** | | | | | | | |
 
 ## Three later-topic choices
