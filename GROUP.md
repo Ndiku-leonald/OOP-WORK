@@ -12,7 +12,7 @@
 | Ndiku Leonald | B35011 | S25B13/086 | Ndiku-leonald | Extension 6: Lightning dance | leo_branch | [71fa20d](https://github.com/Ndiku-leonald/OOP-WORK/commit/71fa20d), [9248ebd](https://github.com/Ndiku-leonald/OOP-WORK/commit/9248ebd) | [PR #3](https://github.com/Ndiku-leonald/OOP-WORK/pull/3) |
 | MARTHA MULWANYI | B34658 | S25B13/037 | marthamulwanyi-hash | Extension 5: Running order | martha-mulwanyi branch | TODO: add commit link | TODO: add PR link |
 | Ruzira Anthony | Pending | M25B13/009 | Pending | Pending: confirm foundation task | anthony-advanced | Pending foundation commit | Pending foundation PR |
-| **TODO: member 4** | | | | | | | |
+| Emuron Joy | B40249 | S26B13/091 | Pending | A1: preview_total integration | joy-advanced | Pending | Pending |
 | **TODO: member 5** | | | | | | | |
 
 ## Three later-topic choices
@@ -23,7 +23,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 |---|---|---|---|---|
 | A4 | Ndiku Leonald: factory implementation and meaningful automated tests | [PR #5](https://github.com/Ndiku-leonald/OOP-WORK/pull/5) | `py -3 stories/05_campus_talent_show/demo_leonald_b35011_a4.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py"` |
 | A5 | Martha MULWANYI: fair running-order planner functionality | TODO: add merged PR link | TODO: add A5 demo command | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_*.py" -v` |
-| A1 | Ruzira Anthony: `StageTime` value object, validation, display, comparison, addition, tests and demo. Joy: `TalentShow.preview_total()` integration, tests and demo. | Anthony: pending PR; Joy: pending PR | `py -3 stories/05_campus_talent_show/demo_anthony_test_a1_stage_time.py`; `py -3 stories/05_campus_talent_show/demo_joy_test_a1_preview.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a1_*.py"` |
+| A1 | Ruzira Anthony: `StageTime` value object, validation, display, comparison, addition, tests and demo. Emuron Joy: `TalentShow.preview_total()` integration, tests and demo. | Anthony: pending PR; Emuron Joy: [PR #7](https://github.com/Ndiku-leonald/OOP-WORK/pull/7) (merged) | `py -3 stories/05_campus_talent_show/demo_anthony_test_a1_stage_time.py`; `py -3 stories/05_campus_talent_show/demo_joy_test_a1_preview.py` | `py -3 -m unittest discover -s stories/05_campus_talent_show -p "test_a1_*.py"` |
 
 ## Individual later-topic contributions and reviews
 
@@ -32,7 +32,7 @@ Choose exactly three different IDs from A1-A5 and record each member's coding or
 | Ndiku Leonald | A4: factory, Single Responsibility improvement and automated tests | leo-advanced | [a20abc2](https://github.com/Ndiku-leonald/OOP-WORK/commit/a20abc2) | [PR #5](https://github.com/Ndiku-leonald/OOP-WORK/pull/5) | TODO: add review links |
 | Martha Mulwanyi |A5:ensuring fair scheduling, proper time management, and reliable performance. | |
 | Ruzira Anthony | A1: implemented `StageTime` with input validation, read-only amount, string/repr formatting, equality, addition, and tests/demo | anthony-advanced | [95a9002](https://github.com/Ndiku-leonald/OOP-WORK/commit/95a9002) | Pending PR | Pending: add review link after commenting on Joy's PR |
-| **TODO: member 4** | | | | | |
+| Emuron Joy | A1: integrated `TalentShow.preview_total()` with mixed choice types, tests and demo | joy-advanced | [305341e](https://github.com/Ndiku-leonald/OOP-WORK/commit/305341e) | [PR #7](https://github.com/Ndiku-leonald/OOP-WORK/pull/7) | Pending: add review link after commenting on Anthony's PR |
 | **TODO: member 5** | | | | | |
 
 ## Explain the work
@@ -43,7 +43,7 @@ The factory creates `Dance`, `Poetry`, and `AudienceWave` objects from clear key
 
 ### A1: StageTime value and total preview
 
-`StageTime` represents non-negative whole minutes and rejects negative values, fractions, and Booleans. Its friendly string and developer representation are distinct; equal values compare equal, and adding two values returns a new value without changing either operand. Anthony implemented and tested the value object. Joy's integration adds `TalentShow.preview_total(choices)`, which totals different choice types without spending time or changing the lineup; it returns zero for an empty list. The A1 preview work depends on `StageTime` being available in the branch where the changes are combined.
+`StageTime` represents non-negative whole minutes and rejects negative values, fractions, and Booleans. Its friendly string and developer representation are distinct; equal values compare equal, and adding two values returns a new value without changing either operand. Anthony implemented and tested the value object. Joy's merged integration adds `TalentShow.preview_total(choices)`, which totals different choice types without spending time or changing the lineup; it returns zero for an empty list.
 
 ## Run the final project
 
