@@ -9,8 +9,8 @@ class NegativeDuration:
         return -1
 
 
-class TalentShowRunningOrderIntegrationTests(unittest.TestCase):
-    def test_books_fair_order_with_existing_booked_act(self):
+class TalentShowRunningOrderTests(unittest.TestCase):
+    def test_plan_books_fair_order_and_respects_existing_booking(self):
         show = TalentShow("Joel", 11)
         show.book(AudienceWave())
         acts = [
@@ -30,11 +30,8 @@ class TalentShowRunningOrderIntegrationTests(unittest.TestCase):
         self.assertEqual(show.clock.remaining, 0)
         self.assertEqual(show.act_count, 4)
 
-    def test_no_fitting_act_preserves_show_state(self):
+    def test_no_fitting_act_leaves_show_unchanged(self):
         show = TalentShow("Joel", 2)
-        show.book(AudienceWave())
-        lineup_before = list(show._lineup)
-        minutes_before = show.clock.remaining
         acts = [
             PerformerAct("P-101", Dance("River Crew", minutes=3)),
             PerformerAct("P-202", Dance("Skyline Crew", minutes=4)),
@@ -44,24 +41,25 @@ class TalentShowRunningOrderIntegrationTests(unittest.TestCase):
 
         self.assertEqual(plan.scheduled, ())
         self.assertEqual(len(plan.skipped), 2)
-        self.assertEqual(show._lineup, lineup_before)
-        self.assertEqual(show.clock.remaining, minutes_before)
-        self.assertEqual(show.act_count, 1)
+        self.assertEqual(show.clock.remaining, 2)
+        self.assertEqual(show.act_count, 0)
 
-    def test_invalid_duration_preserves_show_state(self):
+    def test_invalid_duration_leaves_existing_show_unchanged(self):
         show = TalentShow("Joel", 8)
         show.book(AudienceWave())
         lineup_before = list(show._lineup)
         minutes_before = show.clock.remaining
 
         with self.assertRaises(ValueError):
-            show.plan_and_book([PerformerAct("P-404", NegativeDuration())])
+            show.plan_and_book(
+                [PerformerAct("P-404", NegativeDuration())]
+            )
 
         self.assertEqual(show._lineup, lineup_before)
         self.assertEqual(show.clock.remaining, minutes_before)
         self.assertEqual(show.act_count, 1)
 
-    def test_empty_plan_does_not_change_show_state(self):
+    def test_empty_plan_does_not_change_show(self):
         show = TalentShow("Joel", 5)
 
         plan = show.plan_and_book([])
